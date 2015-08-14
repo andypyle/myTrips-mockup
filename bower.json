@@ -1,0 +1,23 @@
+{
+  "name": "myTrips-mockup",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andypyle/myTrips-mockup",
+  "authors": [
+    "Andrew Pyle <andy.pyle@gmail.com>"
+  ],
+  "description": "Front-end mockup for my myTrips webapp.",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "velocity": "~1.2.2"
+  }
+}

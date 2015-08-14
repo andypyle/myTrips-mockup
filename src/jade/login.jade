@@ -1,0 +1,25 @@
+// Login
+extends ./layout.jade
+block title
+	title myTrips &bull; login
+
+block section
+	main#cover
+		section#home
+			.loginForm
+				.formGroup
+					input(type='text', name='username', placeholder='username')
+					label(for='username') Username
+				.formGroup
+					input(type='password', name='password', placeholder='password')
+					label(for='password') Password				
+				.formBtn
+					button(type='submit') Login
+			.loginOther
+				.loginRegister
+					span.register Register <a href='#'>here</a> or login with:
+				.loginSocial
+					a.fb(href='dashboard.html')
+						i.fa.fa-facebook-square.fa-5x
+					a.gp(href='dashboard.html')
+						i.fa.fa-google-plus-square.fa-5x

@@ -1,0 +1,236 @@
+// ## Imports
+
+@import normalize
+@import mixins/_mixins.utility
+@import mixins/_mixins.flex
+@import mixins/_mixins.buttons
+@import mixins/_mixins.responsive
+@import variables/_colors
+@import variables/_type
+
+// ## Globals		:	*, html, body
+
+*
+	box-sizing: border-box
+	+fastTransition
+
+html,
+body
+	height: 100%
+
+body
+	min-height: 100%
+
+	font-family: $copyFont
+	font-size: $fontSize
+
+	color: #FFF
+
+// ## Repeatables	:	a, p, h1-h6
+
+a
+	color: inherit
+	text-decoration: none
+
+p
+	font-weight: 300
+	line-height: 1.5
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-weight: 700
+	line-height: 1.5
+	margin: 0
+	padding: 0
+
+.heading
+	text-transform: uppercase
+
+/// SECTIONS
+
+main
+	+flex
+	width: 100%
+	height: 100%
+
+	
+
+	&#cover
+		background-image: url('../img/road1.jpg')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+section
+	margin-top: 4rem
+	width: 100%
+
+// ## - HEADER
+
+header
+	+flex
+	+flexRow
+	width: 100%
+	justify-content: space-between
+	align-items: center
+
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+
+	background-color: #EFEFEF
+	color: #666
+	border-bottom: 2px solid #666
+	box-shadow: 0px 10px 10px transparentize(#666, .9)
+
+	padding: .25rem 2rem
+	display: none
+
+// ## - NAVIGATION
+
+.navigation
+	display: none
+
+// ## - HOME / LOGIN
+
+#home
+	+flex
+	+flexCol
+	+flexCenter
+	width: 100%
+	height: 100%
+	margin-top: 0
+	.intro
+		text-align: center
+		margin-bottom: 1.75rem
+		h1
+			font-size: 5rem
+			font-family: $headlineFont
+			font-weight: normal
+			letter-spacing: -1px
+			text-shadow: 0px 4px 10px transparentize(black, .7)
+
+			.my
+				margin-right: -10px
+				font-size: 4.75rem
+			.t
+				margin: auto
+			.rips
+				margin-left: -10px
+
+		.tagLine
+			font-size: 1.45rem
+			width: 50%
+			font-weight: 300
+			text-shadow: 0 3px 8px transparentize(black, .25)
+
+	.login
+		+flex
+		+flexCol
+		+flexCenter
+		text-align: center
+		margin-top: 4rem
+		a
+			display: block
+			font-size: 1.95rem
+			font-weight: 300
+			padding: .75rem 1.5rem
+			border: 3px solid white
+			border-radius: .1rem
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: transparentize(white, .97)
+
+	.loginForm
+		+flex
+		+flexCol
+		width: 75%
+
+		color: $dkBlueGreen
+		margin-bottom: 1.25rem
+		
+		.formGroup
+			+flex
+			+flexCol
+
+			label
+				order: -1
+				display: none
+
+			input
+				border: none
+				box-shadow: none
+				font-size: 1.35rem
+				padding: .75rem
+				background-color: transparentize(#EFEFEF, .025)
+				color: inherit
+				letter-spacing: 0.025%
+				font-weight: 300
+				outline: none
+
+			&:first-of-type
+				input
+					border-radius: .25rem .25rem 0 0
+
+		.formBtn
+			+flex
+			button
+				width: 100%
+				border: none
+				border-radius: 0 0 .25rem .25rem
+				font-size: 1.35rem
+				font-weight: 300
+				text-transform: uppercase
+				letter-spacing: 0.095rem
+				padding: .75rem
+				background-color: $green
+				color: white
+				outline: none
+
+	.loginOther
+		+flex
+		+flexCol
+		text-align: center
+		//background-color: transparentize($dkBlueGreen, .33)
+		width: 75%
+		border-radius: .25rem
+
+		span.register
+			font-size: 1.4rem
+			font-weight: 300
+			a
+				color: $ltGreen
+				font-weight: 400
+				padding: .25rem .5rem
+				margin: .15rem
+				background-color: transparentize(lighten($dkBlue, 8%), .65)
+				border-radius: .25rem
+
+		.loginRegister
+			padding: .5rem 0 .25rem
+			margin-bottom: .75rem
+
+		.loginSocial
+			padding: .5rem 0
+			a
+				padding: 0 1rem
+				text-shadow: 0px 0px 30px rgba(0,0,0,0.5)
+
+				&.fb
+					color: $facebookBlue
+
+				&.gp
+					color: $googleRed
+
+// ## - DASHBOARD
+
+#dashboard
+	+flex
+	+flexCol
+	padding: 0 .5rem
+	color: #444
