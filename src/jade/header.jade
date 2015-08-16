@@ -5,12 +5,37 @@ header
 			span.T T
 			span.rips rips
 
+	.toggleNav
+		a.fa.fa-bars.fa-lg(href='#')
+	
 	nav
-		i.fa.fa-bars.fa-lg
+		.user
+			.userImg
+				img.avatar(src='https://placekitten.com/g/360/360')
+			.userMeta
+				span John Doe		
 		ul.navigation
 			li
-				a(href='#') dashboard
+				a(href='dashboard.html')
+					.navIcon
+						i.fa.fa-home.fa-lg
+					.navText
+						span dashboard
 			li
-				a(href='#') about
+				a(href='#')
+					.navIcon
+						i.fa.fa-plus.fa-lg
+					.navText
+						span new trip
 			li
-				a(href='#') logout
+				a(href='#')
+					.navIcon
+						i.fa.fa-info.fa-lg
+					.navText
+						span about
+			li
+				a(href='/')
+					.navIcon
+						i.fa.fa-sign-out.fa-lg
+					.navText
+						span logout

@@ -96,7 +96,7 @@ gulp.task('jade', function(){
 		.pipe(jade(sources.jade.opts))
 		.pipe(gulp.dest(sources.jade.out))
     .pipe(gulp.dest(sources.build.html))
-    .pipe(connect.reload());
+    //.pipe(connect.reload());
 });
 /// End jade compiling
 
@@ -148,7 +148,7 @@ gulp.task('build', ['jshint', 'scripts', 'sass', 'images', 'jade']);
 
 
 gulp.task('watch', function(){
-	gulp.watch(['./src/sass/**/*.sass', './src/jade/**/*.jade'], ['sass','jade']);
+	gulp.watch(['./src/sass/**/*.sass', './src/jade/**/*.jade', './src/js/main.js'], ['sass','jade','scripts']);
 });
 
-gulp.task('default', ['browsersync','images','sass','jade','watch']);
+gulp.task('default', ['browsersync','images','sass','jade','scripts','watch']);

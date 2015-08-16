@@ -64,9 +64,11 @@ main
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
+	background-color: rgba(0,0,0,0.18)
+	background-blend-mode: soft-light
 
 section
-	margin-top: 4.2rem
+	//margin-top: 4.2rem
 	width: 100%
 
 // ## - HEADER
@@ -78,15 +80,12 @@ header
 	justify-content: space-between
 	align-items: center
 
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
+	
 
 	background-color: #EFEFEF
 	color: #666
 	border-bottom: 2px solid #666
-	box-shadow: 0px 10px 10px transparentize(#666, .9)
+	//box-shadow: 0px 10px 10px transparentize(#666, .9)
 
 	padding: .25rem 2rem
 
@@ -105,9 +104,64 @@ header
 
 
 // ## - NAVIGATION
+nav
+	+flex
+	+flexCol
+	width: 80%
+	height: 100vh
+	background-color: lighten($green, 37%)
+	box-shadow: 3px 0px 12px 0 rgba(0, 0, 0, 0.2);
+	margin: 0
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 25
+	transform: translateX(-100%)
 
-.navigation
-	display: none
+	.user
+		+flex
+		+flexCol
+		+flexCenter
+		padding: 2.25rem
+
+		width: 100%
+		border-bottom: 1px solid #CCC
+		.userImg
+			padding-bottom: .75rem
+			img.avatar
+				width: 100px
+				height: auto
+				border-radius: 50%
+		.userMeta
+			padding-top: 1.25rem
+			span
+				font-size: 1.75rem
+				font-weight: 300
+				text-transform: uppercase
+				letter-spacing: 0.025rem
+
+	ul
+		padding: 1.25rem 0
+		li
+			margin: 0
+			+flex
+			+flexRow
+			a
+				+flex
+				+flexRow
+				justify-content: flex-end
+				align-items: center
+				width: 100%
+				font-size: 1.2rem
+				font-weight: 300
+				padding: .75rem .5rem
+				text-transform: uppercase
+				letter-spacing: 0.035rem
+				.navIcon
+					+flex
+					+flexCenter
+					width: 18%
+					order: 2
 
 // ## - HOME / LOGIN
 
@@ -266,9 +320,11 @@ header
 	color: #444
 
 	.dashPanel
-		padding: .5rem 0 0
-		margin-top: 1rem
-		border-radius: .25rem
+		//padding: .5rem 0 0
+		margin-top: .5rem
+		border-radius: .2rem
+		background-color: #efefef
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 		h2
 			margin: 0
 			line-height: 1
@@ -286,15 +342,14 @@ header
 			color: #888
 
 		.dashPanelHeading
-			padding-left: .5rem
+			padding: .5rem
+			background-color: $ltGreen
+			border-radius: .2rem .2rem 0 0
 
 // ## - DASHBOARD - INVITATIONS
 .invitations
 	+flex
 	+flexCol
-	background-color: #efefef
-	padding-bottom: 0
-	margin-top: .5rem !important
 
 	.invitationList
 		+flex
@@ -329,6 +384,12 @@ header
 					margin: 0
 					align-self: center
 					font-size: 1.5rem
+
+					&.fa-check
+						color: $green
+
+					&.fa-times
+						color: desaturate(darken(tomato, 6%), 50%)
 					
 
 			.invitationTitle
@@ -356,9 +417,6 @@ header
 .mytrips
 	+flex
 	+flexCol
-	background-color: #efefef
-	padding-bottom: 0
-	margin-top: .5rem !important
 
 	.mytripsList
 		+flex
@@ -393,3 +451,47 @@ header
 				h3
 					font-size: 1.25rem
 					padding: .5rem
+
+
+// ## - DASHBOARD - MY TRIPS
+.theirtrips
+	+flex
+	+flexCol
+
+	.theirtripsList
+		+flex
+		+flexCol
+		margin: .5rem 0 0
+		padding: 0
+
+		li
+			+flex
+			+flexRow
+			flex: 1
+
+			align-items: center
+			justify-content: space-between
+
+			border-bottom: 1px solid #DFDFDF
+			margin: 0
+			padding: .5rem 0
+			&:last-of-type
+				border: 0
+
+			.theirtripsTitle
+				width: 80%
+				h3
+					font-size: 1.25rem
+					padding: .5rem 1rem
+
+			.theirtripsOrganizer
+				+flex
+				+flexRow
+				flex-grow: 0
+				justify-content: flex-start
+				flex-basis: 25%
+				span
+					flex-grow: 1
+					padding: 0.25rem
+					text-align: left
+					white-space: initial

@@ -20,11 +20,25 @@
 			<div class="brand">
 				<h1 class="logo"><span class="my">my</span><span class="T">T</span><span class="rips">rips</span></h1>
 			</div>
-			<nav><i class="fa fa-bars fa-lg"></i>
+			<div class="toggleNav"><a href="#" class="fa fa-bars fa-lg"></a></div>
+			<nav>
+				<div class="user">
+					<div class="userImg"><img src="https://placekitten.com/g/360/360" class="avatar"></div>
+					<div class="userMeta"><span>John Doe		</span></div>
+				</div>
 				<ul class="navigation">
-					<li><a href="#">dashboard</a></li>
-					<li><a href="#">about</a></li>
-					<li><a href="#">logout</a></li>
+					<li><a href="dashboard.html">
+							<div class="navIcon"><i class="fa fa-home fa-lg"></i></div>
+							<div class="navText"><span>dashboard</span></div></a></li>
+					<li><a href="#">
+							<div class="navIcon"><i class="fa fa-plus fa-lg"></i></div>
+							<div class="navText"><span>new trip</span></div></a></li>
+					<li><a href="#">
+							<div class="navIcon"><i class="fa fa-info fa-lg"></i></div>
+							<div class="navText"><span>about</span></div></a></li>
+					<li><a href="/">
+							<div class="navIcon"><i class="fa fa-sign-out fa-lg"></i></div>
+							<div class="navText"><span>logout</span></div></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -70,6 +84,21 @@
 								<div class="mytripsTitle">
 									<h3>Big Sur Spring 2016</h3>
 								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="dashPanel theirtrips">
+					<div class="dashPanelHeading">
+						<h2>Their Trips</h2>
+					</div>
+					<div class="dashPanelContent">
+						<ul class="theirtripsList">
+							<li>
+								<div class="theirtripsTitle">
+									<h3>Yosemite Camping 2015</h3>
+								</div>
+								<div class="theirtripsOrganizer"><span class="organizerName">by <i>John Doe</i></span></div>
 							</li>
 						</ul>
 					</div>
