@@ -398,9 +398,6 @@ th {
 * {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  -webkit-transition: all 180ms ease-in-out;
-     -moz-transition: all 180ms ease-in-out;
-          transition: all 180ms ease-in-out;
 }
 
 html,
