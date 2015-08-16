@@ -59,14 +59,14 @@ main
 
 	
 
-	&#cover
-		background-image: url('../img/road1.jpg')
-		background-size: cover
-		background-position: center
-		background-repeat: no-repeat
+
+	background-image: url('../img/road1.jpg')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
 
 section
-	margin-top: 4rem
+	margin-top: 4.2rem
 	width: 100%
 
 // ## - HEADER
@@ -89,7 +89,20 @@ header
 	box-shadow: 0px 10px 10px transparentize(#666, .9)
 
 	padding: .25rem 2rem
-	display: none
+
+	h1.logo
+		font-family: $headlineFont
+		letter-spacing: -0.005rem
+
+		span.my
+			font-size: 1.9rem
+			margin-right: -.3rem
+		span.t
+			margin: auto
+		span.rips
+			font-size: 1.9rem
+			margin-left: -.3rem
+
 
 // ## - NAVIGATION
 
@@ -158,6 +171,9 @@ header
 			+flex
 			+flexCol
 
+			margin: 0
+			padding: 0
+
 			label
 				order: -1
 				display: none
@@ -169,13 +185,13 @@ header
 				padding: .75rem
 				background-color: transparentize(#EFEFEF, .025)
 				color: inherit
-				letter-spacing: 0.025%
+				letter-spacing: 0.08rem
 				font-weight: 300
 				outline: none
-
-			&:first-of-type
-				input
+				border-radius: 0
+				&[name='username']
 					border-radius: .25rem .25rem 0 0
+					border-bottom: 2px solid #ccc
 
 		.formBtn
 			+flex
@@ -217,6 +233,7 @@ header
 
 		.loginSocial
 			padding: .5rem 0
+			margin-bottom: 3rem
 			a
 				padding: 0 1rem
 				text-shadow: 0px 0px 30px rgba(0,0,0,0.5)
@@ -227,6 +244,19 @@ header
 				&.gp
 					color: $googleRed
 
+	.loginForgot
+		margin-bottom: 1rem
+		a.forgot
+			font-size: 1rem
+			font-weight: 300
+			letter-spacing: 0.045rem
+			color: #EFEFEF
+			padding: .65rem
+			background-color: transparentize($dkBlueGreen, .15)
+			text-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+			border-radius: .25rem
+			opacity: .95
+
 // ## - DASHBOARD
 
 #dashboard
@@ -234,3 +264,132 @@ header
 	+flexCol
 	padding: 0 .5rem
 	color: #444
+
+	.dashPanel
+		padding: .5rem 0 0
+		margin-top: 1rem
+		border-radius: .25rem
+		h2
+			margin: 0
+			line-height: 1
+			letter-spacing: 0.025rem
+
+		h3
+			margin: 0
+			line-height: 1
+			letter-spacing: 0.025rem
+			font-weight: 500
+
+		span.organizerName
+			font-size: 1rem
+			font-weight: 400
+			color: #888
+
+		.dashPanelHeading
+			padding-left: .5rem
+
+// ## - DASHBOARD - INVITATIONS
+.invitations
+	+flex
+	+flexCol
+	background-color: #efefef
+	padding-bottom: 0
+	margin-top: .5rem !important
+
+	.invitationList
+		+flex
+		+flexCol
+		margin: .5rem 0 0
+		padding: 0
+
+		li
+			+flex
+			+flexRow
+			flex: 1
+
+			align-items: baseline
+			justify-content: space-between
+
+			border-bottom: 1px solid #DFDFDF
+			margin: 0
+			padding: .5rem 0
+			&:last-of-type
+				border: 0
+
+			.invitationConfirm
+				+flex
+				+flexRow
+				flex-flow: nowrap
+				padding: 0.25rem
+				margin: 0
+				line-height: 1.5
+				width: 20%
+				a
+					padding: .25rem
+					margin: 0
+					align-self: center
+					font-size: 1.5rem
+					
+
+			.invitationTitle
+				margin: 0
+				padding: 0
+				width: 50%
+				flex: 1
+				h3
+					line-height: 1.5 !important
+					padding: 0.25rem
+
+			.invitationOrganizer
+				+flex
+				+flexRow
+				flex-grow: 0
+				justify-content: flex-start
+				flex-basis: 25%
+				span
+					flex-grow: 1
+					padding: 0.25rem
+					text-align: left
+					white-space: initial
+
+// ## - DASHBOARD - MY TRIPS
+.mytrips
+	+flex
+	+flexCol
+	background-color: #efefef
+	padding-bottom: 0
+	margin-top: .5rem !important
+
+	.mytripsList
+		+flex
+		+flexCol
+		margin: .5rem 0 0
+		padding: 0
+
+		li
+			+flex
+			+flexRow
+			flex: 1
+
+			align-items: center
+			justify-content: space-between
+
+			border-bottom: 1px solid #DFDFDF
+			margin: 0
+			padding: .5rem 0
+			&:last-of-type
+				border: 0
+
+			.mytripsManage
+				+flex
+				justify-content: center
+				width: 20%
+				a
+					font-size: 1.75rem
+					padding: .5rem
+
+			.mytripsTitle
+				width: 80%
+				h3
+					font-size: 1.25rem
+					padding: .5rem

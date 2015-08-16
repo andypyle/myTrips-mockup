@@ -16,23 +16,11 @@
 		<link rel="stylesheet" href="styles/style.min.css">
 	</head>
 	<body>
-		<header>
-			<div class="brand">
-				<h1 class="logo">myTrips</h1>
-			</div>
-			<nav><i class="fa fa-bars fa-lg"></i>
-				<ul class="navigation">
-					<li><a href="#">dashboard</a></li>
-					<li><a href="#">about</a></li>
-					<li><a href="#">logout</a></li>
-				</ul>
-			</nav>
-		</header>
 		<main id="cover">
 			<section id="home">
 				<div class="loginForm">
 					<div class="formGroup">
-						<input type="text" name="username" placeholder="username">
+						<input type="text" name="username" placeholder="username" class="topBorderRadius">
 						<label for="username">Username</label>
 					</div>
 					<div class="formGroup">
@@ -40,13 +28,14 @@
 						<label for="password">Password				</label>
 					</div>
 					<div class="formBtn">
-						<button type="submit">Login</button>
+						<button type="submit" class="bottomBorderRadius">Login</button>
 					</div>
 				</div>
 				<div class="loginOther">
 					<div class="loginRegister"><span class="register">Register <a href='#'>here</a> or login with:</span></div>
 					<div class="loginSocial"><a href="dashboard.html" class="fb"><i class="fa fa-facebook-square fa-5x"></i></a><a href="dashboard.html" class="gp"><i class="fa fa-google-plus-square fa-5x"></i></a></div>
 				</div>
+				<div class="loginForgot"><a href="#" class="forgot">Forgot your password?</a></div>
 			</section>
 		</main>
 		<!-- SCRIPTS-->

@@ -8,13 +8,13 @@ block section
 		section#home
 			.loginForm
 				.formGroup
-					input(type='text', name='username', placeholder='username')
+					input.topBorderRadius(type='text', name='username', placeholder='username')
 					label(for='username') Username
 				.formGroup
 					input(type='password', name='password', placeholder='password')
 					label(for='password') Password				
 				.formBtn
-					button(type='submit') Login
+					button.bottomBorderRadius(type='submit') Login
 			.loginOther
 				.loginRegister
 					span.register Register <a href='#'>here</a> or login with:
@@ -23,3 +23,5 @@ block section
 						i.fa.fa-facebook-square.fa-5x
 					a.gp(href='dashboard.html')
 						i.fa.fa-google-plus-square.fa-5x
+			.loginForgot
+				a(href='#').forgot Forgot your password?

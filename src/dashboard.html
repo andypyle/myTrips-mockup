@@ -18,7 +18,7 @@
 	<body>
 		<header>
 			<div class="brand">
-				<h1 class="logo">myTrips</h1>
+				<h1 class="logo"><span class="my">my</span><span class="T">T</span><span class="rips">rips</span></h1>
 			</div>
 			<nav><i class="fa fa-bars fa-lg"></i>
 				<ul class="navigation">
@@ -30,12 +30,50 @@
 		</header>
 		<main>
 			<section id="dashboard">
-				<h2>Dashboard</h2>
-				<ul>
-					<li>upcoming trips</li>
-					<li>invitations</li>
-					<li>new trip</li>
-				</ul>
+				<div class="dashPanel invitations">
+					<div class="dashPanelHeading">
+						<h2>Invitations</h2>
+					</div>
+					<div class="dashPanelContent">
+						<ul class="invitationList">
+							<li>
+								<div class="invitationConfirm"><a href="#" class="fa fa-check fa-lg"></a><a href="#" class="fa fa-times fa-lg"></a></div>
+								<div class="invitationTitle">
+									<h3>Yosemite Camping 2015</h3>
+								</div>
+								<div class="invitationOrganizer"><span class="organizerName">by <i>John Doe</i></span></div>
+							</li>
+							<li>
+								<div class="invitationConfirm"><a href="#" class="fa fa-check fa-lg"></a><a href="#" class="fa fa-times fa-lg"></a></div>
+								<div class="invitationTitle">
+									<h3>Sequoia Fall 2015</h3>
+								</div>
+								<div class="invitationOrganizer"><span class="organizerName">by <i>Andrew Pyle</i></span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="dashPanel mytrips">
+					<div class="dashPanelHeading">
+						<h2>My Trips</h2>
+					</div>
+					<div class="dashPanelContent">
+						<ul class="mytripsList">
+							<li>
+								<div class="mytripsManage"><a href="#" class="fa fa-edit fa-lg"></a></div>
+								<div class="mytripsTitle">
+									<h3>Yosemite Camping 2015</h3>
+								</div>
+							</li>
+							<li>
+								<div class="mytripsManage"><a href="#" class="fa fa-edit fa-lg"></a></div>
+								<div class="mytripsTitle">
+									<h3>Big Sur Spring 2016</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</section>
 		</main>
 		<!-- SCRIPTS-->

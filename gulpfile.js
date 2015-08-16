@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    connect = require('gulp-connect'),
     browserSync = require('browser-sync').create();
 
 // Set up directories.
@@ -149,7 +148,7 @@ gulp.task('build', ['jshint', 'scripts', 'sass', 'images', 'jade']);
 
 
 gulp.task('watch', function(){
-	gulp.watch(['./src/sass/**/*.sass', './src/jade/**/*.jade', './src/js/main.js'], ['sass','jade','jshint','scripts']);
+	gulp.watch(['./src/sass/**/*.sass', './src/jade/**/*.jade'], ['sass','jade']);
 });
 
-gulp.task('default', ['browsersync','images','sass','jade','jshint','scripts','watch']);
+gulp.task('default', ['browsersync','images','sass','jade','watch']);

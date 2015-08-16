@@ -3,11 +3,46 @@ extends ./layout.jade
 block title
 	title myTrips &bull; dashboard
 
+block header
+	include header.jade
+
 block section
 	main
 		section#dashboard
-			h2 Dashboard
-			ul
-				li upcoming trips
-				li invitations
-				li new trip
+			.dashPanel.invitations
+				.dashPanelHeading
+					h2 Invitations
+				.dashPanelContent
+					ul.invitationList
+						li
+							.invitationConfirm
+								a.fa.fa-check.fa-lg(href='#')
+								a.fa.fa-times.fa-lg(href='#')
+							.invitationTitle
+								h3 Yosemite Camping 2015
+							.invitationOrganizer
+								span.organizerName by <i>John Doe</i>
+						li
+							.invitationConfirm
+								a.fa.fa-check.fa-lg(href='#')
+								a.fa.fa-times.fa-lg(href='#')
+							.invitationTitle
+								h3 Sequoia Fall 2015
+							.invitationOrganizer
+								span.organizerName by <i>Andrew Pyle</i>
+
+			.dashPanel.mytrips
+				.dashPanelHeading
+					h2 My Trips
+				.dashPanelContent
+					ul.mytripsList
+						li
+							.mytripsManage
+								a.fa.fa-edit.fa-lg(href='#')
+							.mytripsTitle
+								h3 Yosemite Camping 2015
+						li
+							.mytripsManage
+								a.fa.fa-edit.fa-lg(href='#')
+							.mytripsTitle
+								h3 Big Sur Spring 2016
